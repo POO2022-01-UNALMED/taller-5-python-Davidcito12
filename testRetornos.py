@@ -23,16 +23,12 @@ def testTotalTipo():
     print(Animal.totalPorTipo().replace('\n', ''))
     if Animal.totalPorTipo().replace('\n', '') == comp.replace('\n', ''):
         ok = True
-    print(ok)
+    assert(ok)
 
 def testToString():
     ave1 =Ave("paloma", 5, "ciudad", "F", "gris")
     ok = False
     comp = "Mi nombre es paloma, tengo una edad de 5, habito en ciudad y mi genero es F"
-    print(ave1.toString())
     if ave1.toString() ==  comp:
         ok = True
-    print(ok)
-
-testToString()
-testTotalTipo()
+    assert(ok)
