@@ -15,18 +15,21 @@ class Animal:
         from zooAnimales.ave import Ave
         from zooAnimales.pez import Pez
         from zooAnimales.reptil import Reptil
-        return f'Mamiferos: {Mamifero.cantidadMamiferos()}\nAves: {Ave.cantidadAves()}\nReptiles: {Reptil.cantidadReptiles()}\n' \
-               f'Peces: {Pez.cantidadPeces()}\nAnfibios: {Anfibio.cantidadAnfibios()}'
+        return f'Mamiferos : {Mamifero.cantidadMamiferos()}\nAves : {Ave.cantidadAves()}\nReptiles : {Reptil.cantidadReptiles()}\n' \
+               f'Peces : {Pez.cantidadPeces()}\nAnfibios : {Anfibio.cantidadAnfibios()}'
 
     @classmethod
     def movimiento(cls):
         return "desplazarse"
 
-    def __str__(self):
+    def toString(self):
         if self._zona!= None:
             return f'Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat}, ' \
                    f'y mi genero es {self._genero}, la zona en la que me ' \
                    f'ubico es {self._zona.getNombre()}, en el {self._zona.getZoo().getNombre()}'
+        else:
+            return f'Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} ' \
+                   f'y mi genero es {self._genero}'
 
     @classmethod
     def getTotalAnimales(cls):

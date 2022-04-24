@@ -9,6 +9,7 @@ class Pez(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self._colorEscamas = colorEscamas
         self._cantidadAletas = cantidadAletas
+        Pez._listado.append(self)
 
     @classmethod
     def cantidadPeces(cls):
