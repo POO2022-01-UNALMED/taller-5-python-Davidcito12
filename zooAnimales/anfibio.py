@@ -11,7 +11,7 @@ class Reptil(Animal):
         self._venenoso = venenoso
 
     @classmethod
-    def cantidadReptiles(cls):
+    def cantidadAnfibios(cls):
         return len(Reptil._listado)
 
     @classmethod
